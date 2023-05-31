@@ -27,6 +27,10 @@ public class PlayerMovementController : MonoBehaviour
     [Range(0.5f, 25.0f)] 
     private float speedReductionRate = 5.0f;
 
+    [SerializeField]
+    [Range(1.0f, 10.0f)]
+    private float dashSpeedMultiplier = 2.0f;
+
     // Coroutine reference for speed reduction coroutine
     Coroutine speedReducerCoroutine = null;
 
@@ -74,6 +78,20 @@ public class PlayerMovementController : MonoBehaviour
                     }
                     rb.velocity += Vector3.forward * forwardForceMagnitude;
                 }
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                // dash left (negative X)
+                rb.angularVelocity = Vector3.zero;
+                rb.velocity += Vector3.left * forwardForceMagnitude * dashSpeedMultiplier;
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                // dash right (positive X)
+                rb.angularVelocity = Vector3.zero;
+                rb.velocity += Vector3.right * forwardForceMagnitude * dashSpeedMultiplier;
             }
         }
 

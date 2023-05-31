@@ -757,4 +757,5 @@ MonoBehaviour:
   canBeginMotion: 0
   forwardForceMagnitude: 0.5
   maxSpeedLimit: 5
-  speedReductionRate: 10
+  speedReductionRate: 2
+  dashSpeedMultiplier: 3
