@@ -189,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100010, guid: 47616bd0cda748d4cbedcfc908506b9d, type: 3}
+  - {fileID: 2100000, guid: 78f2ccba9a9608949adb58bdf6141b9b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -293,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119330172}
   m_LocalRotation: {x: 0.3599958, y: 0.002198233, z: -0.00084822753, w: 0.9329509}
-  m_LocalPosition: {x: 3.7059, y: 18.817205, z: -19.967964}
+  m_LocalPosition: {x: 3.7301204, y: 14.689835, z: -14.828259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1134972537}
@@ -379,7 +379,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294709459}
   m_LocalRotation: {x: 0.35999584, y: 0.0021982333, z: -0.0008482276, w: 0.932951}
-  m_LocalPosition: {x: 3.7059, y: 18.817205, z: -19.967964}
+  m_LocalPosition: {x: 3.7301204, y: 14.689835, z: -14.828259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -595,8 +595,8 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_CameraDistance: 10
+  m_ScreenY: 0.6
+  m_CameraDistance: 3.42
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -698,7 +698,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100002, guid: bae110eee250e4b418b188f4ae4e3170, type: 3}
+  - {fileID: 2100000, guid: d4d9cd59bb36c454ba8bbd5021deab7a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
