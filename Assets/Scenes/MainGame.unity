@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &103487203 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
-  m_PrefabInstance: {fileID: 4695038645534362027}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &119330172
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planes:
-  - {fileID: 103487203}
+  - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
   - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
   - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
   playerMovementController: {fileID: 1437038229}
