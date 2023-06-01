@@ -374,6 +374,7 @@ MonoBehaviour:
   - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
   - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
   playerMovementController: {fileID: 1437038229}
+  planesToPassBeforeBeginDestroying: 2
 --- !u!4 &319328470
 Transform:
   m_ObjectHideFlags: 0

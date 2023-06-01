@@ -10,7 +10,7 @@ public class PlayerMovementController : MonoBehaviour
 
     // this field is set only once, when the velocity of player becomes zero at the start of the scene
     bool hasStopped = false;
-    float limitToDetectStop = 1e-1f;
+    float limitToDetectStop = 1.0f;
 
     [SerializeField, Range(0.0f, 2.0f)]
     private float initialSpeed = 1.0f;
@@ -72,7 +72,6 @@ public class PlayerMovementController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.LogWarning("Collided");
         if (other.isTrigger)
         {
             if (other.name == fallDetectionPlaneName)
@@ -107,7 +106,6 @@ public class PlayerMovementController : MonoBehaviour
 
             // set 'canBeginMotion'
             canBeginMotion = true;
-            Debug.Log("Can begin motion");
         }
 
         if (canBeginMotion)
@@ -129,7 +127,6 @@ public class PlayerMovementController : MonoBehaviour
                     if (hasHitSpeedLimitOnce)
                     {
                         StopCoroutine(speedReducerCoroutine);
-                        Debug.Log("Speed reduced now");
                     }
                     rb.velocity += Vector3.forward * forwardForceMagnitude;
                 }
@@ -153,7 +150,6 @@ public class PlayerMovementController : MonoBehaviour
 
     private void PreventSpeeding()
     {
-        Debug.Log("Speed Throttled");
         if (rb.velocity.magnitude > maxSpeedLimit)
         {
             // calculate the new z component for velocity
@@ -169,7 +165,6 @@ public class PlayerMovementController : MonoBehaviour
 
     private IEnumerator SpeedReducerCoroutine()
     {
-        Debug.Log("Reducing speed now.");
         Vector3 velocity = rb.velocity;
 
         if (velocity.magnitude > maxSpeedLimit)

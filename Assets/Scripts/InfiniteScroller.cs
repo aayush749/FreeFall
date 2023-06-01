@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class InfiniteScroller : MonoBehaviour
@@ -15,12 +14,23 @@ public class InfiniteScroller : MonoBehaviour
 
     GameObject oldPlane;
 
+    [SerializeField]
+    private int planesToPassBeforeBeginDestroying = 2;
+
+    private int planeDestroyEventsRaised = 0;
+
+    Queue<GameObject> planesToDestroyQueue;
+
+    private Coroutine oldPlanesDestroyerCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
         // Subscribe to OnFallOffDetect Event for the player
         playerMovementController.OnFallOffDetect += ShufflePlanes;
         playerMovementController.OnEnterNewPlane += DestroyOldPlane;
+
+        planesToDestroyQueue = new Queue<GameObject>();
     }
 
 
@@ -33,8 +43,6 @@ public class InfiniteScroller : MonoBehaviour
     private void ShufflePlanes(object sender, EventArgs args)
     {
         // collided with the fall off detection cube
-        Debug.LogWarning("Collided with the fall-off plane");
-
 
         GameObject currentPlane = playerMovementController.GetCurrentPlane();
 
@@ -70,11 +78,41 @@ public class InfiniteScroller : MonoBehaviour
 //#if UNITY_EDITOR
 //        UnityEditor.EditorApplication.isPaused = true;
 //#endif
-        Debug.LogWarning("Entering new plane");
-        if (oldPlane != null)
+
+        planeDestroyEventsRaised++;
+
+        // Destroy the plane only when specified number of planes have passed behind
+        bool shouldBeginDestroyingPlanes = (planeDestroyEventsRaised % planesToPassBeforeBeginDestroying == 0);
+
+        if (oldPlane != null && shouldBeginDestroyingPlanes)
         {
+            oldPlanesDestroyerCoroutine = StartCoroutine(DestoryOldPlaneCoroutine());
+        }
+        else
+        {
+            if (oldPlane != null)
+            {
+                // enqueue the plane for destruction
+                planesToDestroyQueue.Enqueue(oldPlane);
+            }
+        }
+    }
+
+    private IEnumerator DestoryOldPlaneCoroutine()
+    {
+        while(planesToDestroyQueue.Count != 0)
+        {
+            GameObject oldPlane = planesToDestroyQueue.Dequeue();
             Destroy(oldPlane);
-            Debug.LogWarning("Destroyed old plane");
+
+            yield return new WaitForSeconds(1.0f);
+        }
+
+        // control reaches here when the coroutine has destroyed all the old planes
+        // now we want to stop the coroutine
+        if (oldPlanesDestroyerCoroutine != null)
+        {
+            StopCoroutine(oldPlanesDestroyerCoroutine);
         }
     }
 
