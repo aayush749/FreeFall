@@ -37,6 +37,12 @@ public class PlayerMovementController : MonoBehaviour
     // This field is to track if the speed limit has been hit at least once during the gameplay
     bool hasHitSpeedLimitOnce = false;
 
+    [SerializeField, Tooltip("The name of the plane use to detect fall from the plane, before it happens")]
+    private string fallDetectionPlaneName;
+
+    // The index of the plane in the plane arrays which the player currently is in
+    private int currentPlaneIndex = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +55,30 @@ public class PlayerMovementController : MonoBehaviour
     void Update()
     {
         CheckIfStopped();
+        HandlePlayerMotion();
+        UpdateCurrentPlaneIndex();
+    }
 
+    private void UpdateCurrentPlaneIndex()
+    {
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.LogWarning("Collided");
+        if (other.isTrigger && other.name == fallDetectionPlaneName)
+        {
+            // collided with the fall off detection cube
+            Debug.LogWarning("Collided with the fall-off plane");
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPaused = true;
+#endif
+        }
+    }
+
+    private void HandlePlayerMotion()
+    {
         if (!canBeginMotion && hasStopped)
         {
             // TODO: send a message to the UI manager to show 'START' text
@@ -94,7 +123,6 @@ public class PlayerMovementController : MonoBehaviour
                 rb.velocity += Vector3.right * forwardForceMagnitude * dashSpeedMultiplier;
             }
         }
-
     }
 
     private IEnumerator SpeedReducerCoroutine()
