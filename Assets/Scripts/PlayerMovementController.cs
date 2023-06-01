@@ -40,8 +40,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField, Tooltip("The name of the plane use to detect fall from the plane, before it happens")]
     private string fallDetectionPlaneName;
 
-    // The index of the plane in the plane arrays which the player currently is in
-    private int currentPlaneIndex = 0;
+    public event EventHandler OnFallOffDetect;
 
     // Start is called before the first frame update
     void Start()
@@ -69,11 +68,8 @@ public class PlayerMovementController : MonoBehaviour
         Debug.LogWarning("Collided");
         if (other.isTrigger && other.name == fallDetectionPlaneName)
         {
-            // collided with the fall off detection cube
-            Debug.LogWarning("Collided with the fall-off plane");
-#if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPaused = true;
-#endif
+            // invoke the event of fall detection
+            OnFallOffDetect.Invoke(this, EventArgs.Empty);
         }
     }
 

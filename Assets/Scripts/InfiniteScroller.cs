@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,12 +15,23 @@ public class InfiniteScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Subscribe to OnFallOffDetect Event for the player
+        playerMovementController.OnFallOffDetect += ShufflePlanes;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void ShufflePlanes(object sender, EventArgs args)
+    {
+        // collided with the fall off detection cube
+        Debug.LogWarning("Collided with the fall-off plane");
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPaused = true;
+#endif
     }
 }

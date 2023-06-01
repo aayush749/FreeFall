@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planes: []
-  playerMovementController: {fileID: 0}
+  playerMovementController: {fileID: 1437038229}
 --- !u!4 &319328470
 Transform:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ Transform:
   m_GameObject: {fileID: 1931911435}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 1.7, z: 0.68}
-  m_LocalScale: {x: 1, y: 0.20464277, z: 0.8981213}
+  m_LocalScale: {x: 1, y: 0.20464277, z: 100}
   m_Children: []
   m_Father: {fileID: 103487208}
   m_RootOrder: 0
