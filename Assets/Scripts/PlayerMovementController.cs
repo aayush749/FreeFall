@@ -51,6 +51,7 @@ public class PlayerMovementController : MonoBehaviour
 
     public event EventHandler OnFallOffDetect;
     public event EventHandler OnEnterNewPlane;
+    public event EventHandler OnPlayerDead; // this event would be invoked when the player dies (goes below a certain speed)
 
     // Start is called before the first frame update
     void Start()
