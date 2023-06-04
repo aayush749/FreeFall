@@ -15,6 +15,10 @@ public class ScoreUpdater : MonoBehaviour
 
     bool isGameOver = false;
 
+    // End Game Board Score text fields
+    [SerializeField]
+    TMP_Text currentScoreTMP, oldHighScoreTMP;
+
     // Bam Sprites
     [SerializeField]
     List<GameObject> bamSprites;
@@ -96,6 +100,10 @@ public class ScoreUpdater : MonoBehaviour
         // Save the high score to the disk, if it has changed
         if (score > highScore)
             SaveHighScoreToDisk(score);
+
+        // Update the scores value on the end game board
+        currentScoreTMP.text = string.Format($"Your Score: {score}");
+        oldHighScoreTMP.text = string.Format($"High Score: {highScore}");
 
         // stop the game's execution
         Time.timeScale = 0;
