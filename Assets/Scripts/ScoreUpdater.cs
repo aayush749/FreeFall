@@ -78,6 +78,14 @@ public class ScoreUpdater : MonoBehaviour
 
         // Instantiate a BAM sprite at point of contact (currently not doing this)
         //InstatiateBamSpriteAtCollisionPoint(collisionPoint);
+
+        // Bring up Game Over board by triggering its animation
+        Animator animator = GameObject.Find("Game Over Text Background").GetComponent<Animator>();
+        if (animator != null)
+        {
+            animator.SetTrigger("GameOverTrigger");
+            Debug.Log("Set game over trigger");
+        }
     }
 
     private void InstatiateBamSpriteAtCollisionPoint(Vector3 point)
