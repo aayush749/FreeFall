@@ -1726,7 +1726,7 @@ MonoBehaviour:
   maxSpeedLimit: 15
   speedReductionRate: 2
   dashSpeedMultiplier: 3
-  fallDetectionPlaneName: Fall Detection Plane
+  fallOffDetectionPlaneName: Fall Detection Plane
   entryDetectionPlaneName: Entry Detection Plane
 --- !u!82 &1437038231
 AudioSource:

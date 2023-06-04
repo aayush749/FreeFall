@@ -107,10 +107,10 @@ public class ScoreUpdater : MonoBehaviour
             Debug.Log("You made a new high score!!");
         }
 
-        Vector3 collisionPoint = args.pointOfCollision.point;
-        Debug.Log("Collision occurred at " + collisionPoint);
 
         // Instantiate a BAM sprite at point of contact (currently not doing this)
+        //Vector3 collisionPoint = args.pointOfCollision;
+        //Debug.Log("Collision occurred at " + collisionPoint);
         //InstatiateBamSpriteAtCollisionPoint(collisionPoint);
 
         // Bring up Game Over board by triggering its animation

@@ -43,8 +43,8 @@ public class PlayerMovementController : MonoBehaviour
     // Plane on which the player is currently on
     private GameObject plane;
 
-    [SerializeField, Tooltip("The name of the plane used to detect fall from the plane, before it happens")]
-    private string fallDetectionPlaneName;
+    [SerializeField, Tooltip("The name of the plane used to detect fall from the plane, before it happens, this would be used to spawn new planes to continue infinite gameplay")]
+    private string fallOffDetectionPlaneName;
 
     [SerializeField, Tooltip("The name of the plane used to detect entry in a new plane")]
     private string entryDetectionPlaneName;
@@ -54,7 +54,7 @@ public class PlayerMovementController : MonoBehaviour
 
     public class PlayerDeadEventArgs
     {
-        public ContactPoint pointOfCollision { get; set; }
+        public Vector3 pointOfCollision { get; set; }
     }
 
 
@@ -85,7 +85,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (other.isTrigger)
         {
-            if (other.name == fallDetectionPlaneName)
+            if (other.name == fallOffDetectionPlaneName)
             {
                 // invoke the event of fall detection
                 OnFallOffDetect.Invoke(this, EventArgs.Empty);
@@ -96,6 +96,15 @@ public class PlayerMovementController : MonoBehaviour
                 // invoke the event of entering new plane
                 OnEnterNewPlane.Invoke(this, EventArgs.Empty);
             }
+            // The following conditions are to detect player falling off the left or right ledge of the plane, to invoke the OnPlayerDead event
+            else if (other.name == "Left Fall Detection Plane" || other.name == "Right Fall Detection Plane")
+            {
+                // invoke the event with a zero vec3 (default for an invalid argument in this case)
+                PlayerDeadEventArgs eventArgs = new PlayerDeadEventArgs();
+                eventArgs.pointOfCollision = Vector3.zero;
+                OnPlayerDead.Invoke(this, eventArgs);
+            }
+
         }
     }
 
@@ -110,7 +119,7 @@ public class PlayerMovementController : MonoBehaviour
 
             // 2) Invoke the event with the collision point
             PlayerDeadEventArgs eventArgs = new PlayerDeadEventArgs();
-            eventArgs.pointOfCollision = contact;
+            eventArgs.pointOfCollision = contact.point;
             OnPlayerDead.Invoke(this, eventArgs);
         }
     }
