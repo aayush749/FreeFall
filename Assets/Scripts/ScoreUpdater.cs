@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -17,6 +18,8 @@ public class ScoreUpdater : MonoBehaviour
     // Bam Sprites
     [SerializeField]
     List<GameObject> bamSprites;
+
+    private static string saveFileName = "HighScore.txt";
 
     // Start is called before the first frame update
     void Start()
@@ -49,23 +52,51 @@ public class ScoreUpdater : MonoBehaviour
 
         score = (int)(Time.realtimeSinceStartup) - initialScore;
         scoreText.text = string.Format("Score: {0}", score);
-
-        if (score > highScore)
-        {
-            // new high score is set
-            // update the high score to be the same value as the score
-            highScore = score;
-            highScoreText.text = string.Format("High Score: {0}", highScore);
-        }
     }
 
     private static int GetLatestHighScore()
     {
-        return 1;
+        return LoadHighScoreFromDisk();
+    }
+
+    private static int LoadHighScoreFromDisk()
+    {
+        var persistentDataPath = Application.persistentDataPath;
+        Debug.LogFormat($"Game is saving data at: {persistentDataPath}");
+
+        string saveFilePath = Path.Combine(persistentDataPath, saveFileName);
+
+        if (File.Exists(saveFilePath))
+        {
+            // Save file exists, read the high score from it
+            string highScoreTxt = File.ReadAllText(saveFilePath);
+            return int.Parse(highScoreTxt);
+        }
+        else
+        {
+            // Save file doesn't exist, initialize with a high score of 0
+            SaveHighScoreToDisk(0);
+        }
+
+        // in all cases other than a successful read from the save file, return 0 from this function
+        return 0;
+    }
+
+    private static void SaveHighScoreToDisk(int scoreToSave)
+    {
+        var saveFilePath = Application.persistentDataPath;
+        saveFilePath = Path.Combine(saveFilePath, saveFileName);
+
+        // Overwrite the file if its exists/ create a new file if it doesn't exist
+        File.WriteAllText(saveFilePath , Convert.ToString(scoreToSave));
     }
 
     private void OnGameEnd(object sender, PlayerMovementController.PlayerDeadEventArgs args)
     {
+        // Save the high score to the disk, if it has changed
+        if (score > highScore)
+            SaveHighScoreToDisk(score);
+
         // stop the game's execution
         Time.timeScale = 0;
         isGameOver = true;
