@@ -12,6 +12,12 @@ public class ScoreUpdater : MonoBehaviour
     int score = 0;
     int highScore = 0;
 
+    bool isGameOver = false;
+
+    // Bam Sprites
+    [SerializeField]
+    List<GameObject> bamSprites;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +28,23 @@ public class ScoreUpdater : MonoBehaviour
         // update the high score
         highScore = GetLatestHighScore();
         highScoreText.text = string.Format("High Score: {0}", highScore);
+
+        // Grab the reference of the player object
+        PlayerMovementController player = GameObject.Find("Player").GetComponent<PlayerMovementController>();
+        player.OnPlayerDead += OnGameEnd;
     }
 
     // Update is called once per frame
     void Update()
     {
-        score = (int) (Time.realtimeSinceStartup);
+        UpdateScores();
+    }
+
+    private void UpdateScores()
+    {
+        if (isGameOver) return;
+
+        score = (int)(Time.realtimeSinceStartup);
         scoreText.text = string.Format("Score: {0}", score);
 
         if (score > highScore)
@@ -43,4 +60,31 @@ public class ScoreUpdater : MonoBehaviour
     {
         return 1;
     }
+
+    private void OnGameEnd(object sender, PlayerMovementController.PlayerDeadEventArgs args)
+    {
+        // stop the game's execution
+        Time.timeScale = 0;
+        isGameOver = true;
+        Debug.Log("Game Over");
+
+        if (highScore < score)
+        {
+            Debug.Log("You made a new high score!!");
+        }
+
+        Vector3 collisionPoint = args.pointOfCollision.point;
+        Debug.Log("Collision occurred at " + collisionPoint);
+
+        // Instantiate a BAM sprite at point of contact (currently not doing this)
+        //InstatiateBamSpriteAtCollisionPoint(collisionPoint);
+    }
+
+    private void InstatiateBamSpriteAtCollisionPoint(Vector3 point)
+    {
+        int spriteIdx = UnityEngine.Random.Range(0, bamSprites.Count - 1);
+
+        GameObject.Instantiate(bamSprites[spriteIdx], point, Quaternion.identity);
+    }
+
 }

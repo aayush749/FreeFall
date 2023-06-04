@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 620181220}
   m_Layer: 0
   m_Name: Deciduous Trees
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4030,6 +4030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782668876597395 stripped
@@ -5854,6 +5858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.39
@@ -7048,6 +7056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.165
@@ -7319,6 +7331,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8143,6 +8159,10 @@ PrefabInstance:
     - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_Name
       value: Birch_tree1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10010,6 +10030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782668974819101 stripped
@@ -10629,6 +10653,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11502,6 +11530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782669067067546 stripped
@@ -11649,6 +11681,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -13332,6 +13368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782669397908571 stripped
@@ -14008,6 +14048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782669460820708 stripped
@@ -14363,6 +14407,10 @@ PrefabInstance:
     - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_Name
       value: Birch_tree1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16180,6 +16228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782669328053738 stripped
@@ -16330,6 +16382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.39
@@ -16403,6 +16459,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16533,6 +16593,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -16890,6 +16954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.49
@@ -17093,6 +17161,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -17457,6 +17529,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18067,6 +18143,10 @@ PrefabInstance:
     - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_Name
       value: Birch_tree1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19296,6 +19376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.165
@@ -20178,6 +20262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.39
@@ -20653,6 +20741,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -21604,6 +21696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.8006
@@ -22286,6 +22382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782669793120977 stripped
@@ -22836,6 +22936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.165
@@ -23246,6 +23350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782669842168555 stripped
@@ -23385,6 +23493,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -23601,6 +23713,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26792,6 +26908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.87
@@ -27342,6 +27462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782670071474694 stripped
@@ -27621,6 +27745,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -28052,6 +28180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.59
@@ -28406,6 +28538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.74
@@ -28479,6 +28615,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28609,6 +28749,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -29154,6 +29298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782670483016981 stripped
@@ -29171,6 +29319,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29441,6 +29593,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -29863,6 +30019,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30323,6 +30483,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -32312,6 +32476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.31
@@ -33262,6 +33430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782670702036834 stripped
@@ -33335,6 +33507,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
@@ -33485,6 +33661,10 @@ PrefabInstance:
     - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_Name
       value: Rock1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34294,6 +34474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock1
       objectReference: {fileID: 0}
+    - target: {fileID: 1562119382739742, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.61
@@ -34952,6 +35136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782670785609099 stripped
@@ -35456,6 +35644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birch_tree1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.31
@@ -35595,6 +35787,10 @@ PrefabInstance:
     - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_Name
       value: Birch_tree1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36336,6 +36532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782670572741201 stripped
@@ -37012,6 +37212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782670603915537 stripped
@@ -37103,6 +37307,10 @@ PrefabInstance:
     - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_Name
       value: Birch_tree1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216688828669844, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 4908765312130676, guid: 47356d574ebc3a545bfaef26eb02a2ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37234,6 +37442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deciduous_tree1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
 --- !u!4 &7485782670623887119 stripped
@@ -37307,6 +37519,10 @@ PrefabInstance:
     - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
       propertyPath: m_Name
       value: Deciduous_tree1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795318547083921244, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc20bf501e8161b40859eb66568d49f6, type: 3}

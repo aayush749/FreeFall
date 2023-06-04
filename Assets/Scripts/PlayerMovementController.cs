@@ -51,7 +51,14 @@ public class PlayerMovementController : MonoBehaviour
 
     public event EventHandler OnFallOffDetect;
     public event EventHandler OnEnterNewPlane;
-    public event EventHandler OnPlayerDead; // this event would be invoked when the player dies (goes below a certain speed)
+
+    public class PlayerDeadEventArgs
+    {
+        public ContactPoint pointOfCollision { get; set; }
+    }
+
+
+    public event EventHandler<PlayerDeadEventArgs> OnPlayerDead; // this event would be invoked when the player dies (goes below a certain speed)
 
     // Start is called before the first frame update
     void Start()
@@ -86,6 +93,22 @@ public class PlayerMovementController : MonoBehaviour
                 // invoke the event of entering new plane
                 OnEnterNewPlane.Invoke(this, EventArgs.Empty);
             }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Finish")
+        {
+            // Initiate game over sequence
+            
+            // 1) Know the point in space where collision took place
+            ContactPoint contact = collision.contacts[0];
+
+            // 2) Invoke the event with the collision point
+            PlayerDeadEventArgs eventArgs = new PlayerDeadEventArgs();
+            eventArgs.pointOfCollision = contact;
+            OnPlayerDead.Invoke(this, eventArgs);
         }
     }
 

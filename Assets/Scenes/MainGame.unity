@@ -150,15 +150,15 @@ RectTransform:
   m_GameObject: {fileID: 111498039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.575221, y: 0.69, z: 1}
+  m_LocalScale: {x: 6.2255034, y: 0.938883, z: 1.3607}
   m_Children:
   - {fileID: 1892999249}
   m_Father: {fileID: 1712285407}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 756, y: -358}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -307, y: 45}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111498041
@@ -259,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119330172}
   m_LocalRotation: {x: 0.3599958, y: 0.002198233, z: -0.00084822753, w: 0.9329509}
-  m_LocalPosition: {x: -0.01068907, y: 6.879834, z: -7.0282593}
+  m_LocalPosition: {x: -0.010689071, y: 6.879834, z: -6.725259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1134972537}
@@ -345,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294709459}
   m_LocalRotation: {x: 0.35999584, y: 0.0021982333, z: -0.0008482276, w: 0.932951}
-  m_LocalPosition: {x: -0.01068907, y: 6.879834, z: -7.0282593}
+  m_LocalPosition: {x: -0.010689071, y: 6.879834, z: -6.725259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -443,7 +443,7 @@ RectTransform:
   m_GameObject: {fileID: 309689994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.575221, y: 0.69, z: 1}
+  m_LocalScale: {x: 6.2255034, y: 0.938883, z: 1.3607}
   m_Children:
   - {fileID: 726160407}
   m_Father: {fileID: 1712285407}
@@ -451,7 +451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 227, y: -33}
+  m_AnchoredPosition: {x: 310, y: -46}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309689996
@@ -522,8 +522,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planes:
-  - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
-  - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
   - {fileID: 4695038645636538184, guid: 530e363ddab9d8346a142a76c4cdc8d2, type: 3}
   playerMovementController: {fileID: 1437038229}
   planesToPassBeforeBeginDestroying: 2
@@ -935,7 +933,6 @@ GameObject:
   - component: {fileID: 1437038224}
   - component: {fileID: 1437038229}
   - component: {fileID: 1437038231}
-  - component: {fileID: 1437038230}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1029,7 +1026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437038223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 4.29, z: -4.76}
+  m_LocalPosition: {x: -0, y: 4.29, z: -4.457}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1055,14 +1052,6 @@ MonoBehaviour:
   dashSpeedMultiplier: 3
   fallDetectionPlaneName: Fall Detection Plane
   entryDetectionPlaneName: Entry Detection Plane
---- !u!81 &1437038230
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437038223}
-  m_Enabled: 1
 --- !u!82 &1437038231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1208,7 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1272,6 +1261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7f70798ca132745bc65c942aeb7bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bamSprites:
+  - {fileID: 1112886750915272928, guid: 4574cff446153d54aa15ce0b7080f53b, type: 3}
+  - {fileID: 3172429117986878056, guid: 25e8237e36da8174492c773043260b80, type: 3}
 --- !u!1 &1892999248
 GameObject:
   m_ObjectHideFlags: 0
