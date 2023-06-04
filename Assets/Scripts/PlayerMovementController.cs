@@ -63,6 +63,9 @@ public class PlayerMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Reset the time scale to 1
+        Time.timeScale = 1;
+
         rb = GetComponent<Rigidbody>();
         // Give an initial velocity to the player
         rb.velocity = initialSpeed * Vector3.forward;

@@ -9,7 +9,7 @@ public class ScoreUpdater : MonoBehaviour
 {
     TMP_Text scoreText, highScoreText;
 
-    int score = 0;
+    int initialScore = 0, score = 0;
     int highScore = 0;
 
     bool isGameOver = false;
@@ -21,6 +21,9 @@ public class ScoreUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // initialize score
+        initialScore = (int)Time.realtimeSinceStartup;
+
         // Grab references to the text mesh pro objects from the scene
         scoreText = GameObject.Find("Score Text").GetComponent<TMP_Text>();
         highScoreText = GameObject.Find("High Score Text").GetComponent<TMP_Text>();
@@ -44,7 +47,7 @@ public class ScoreUpdater : MonoBehaviour
     {
         if (isGameOver) return;
 
-        score = (int)(Time.realtimeSinceStartup);
+        score = (int)(Time.realtimeSinceStartup) - initialScore;
         scoreText.text = string.Format("Score: {0}", score);
 
         if (score > highScore)
