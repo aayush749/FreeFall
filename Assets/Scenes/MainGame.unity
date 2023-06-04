@@ -790,7 +790,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -61.56198, w: 0}
+  m_margin: {x: 0, y: 0, z: -391.46686, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -61.56198, w: 11.65903}
+  m_margin: {x: 0, y: 0, z: -389.80902, w: 11.65903}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1938,8 +1938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7f70798ca132745bc65c942aeb7bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScoreTMP: {fileID: 726160408}
-  oldHighScoreTMP: {fileID: 1892999250}
+  currentScoreTMP: {fileID: 755718759}
+  oldHighScoreTMP: {fileID: 337912999}
   bamSprites:
   - {fileID: 1112886750915272928, guid: 4574cff446153d54aa15ce0b7080f53b, type: 3}
   - {fileID: 3172429117986878056, guid: 25e8237e36da8174492c773043260b80, type: 3}
