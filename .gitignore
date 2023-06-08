@@ -72,3 +72,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/SimpleToon*
 Assets/Samples/Unity Toon Shader*
+
+# XInputDotNet Example
+/Assets/XInputDotNet/Examples*

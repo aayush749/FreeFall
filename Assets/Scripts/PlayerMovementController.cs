@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -125,6 +126,8 @@ public class PlayerMovementController : MonoBehaviour
     private void OnDisable()
     {
         controllerControls.Gameplay.Disable();
+
+        GamePad.SetVibration(PlayerIndex.One, 0.0f, 0.0f);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -145,13 +148,37 @@ public class PlayerMovementController : MonoBehaviour
             // The following conditions are to detect player falling off the left or right ledge of the plane, to invoke the OnPlayerDead event
             else if (other.name == "Left Fall Detection Plane" || other.name == "Right Fall Detection Plane")
             {
+                if (other.name == "Left Fall Detection Plane")
+                {
+                    StartCoroutine(VibrateController(PlayerIndex.One, 1.0f, 0.0f, new WaitForSecondsRealtime(0.5f)));
+                }
+                else
+                {
+                    StartCoroutine(VibrateController(PlayerIndex.One, 0.0f, 1.0f, new WaitForSecondsRealtime(0.5f)));
+                }
+                
                 // invoke the event with a zero vec3 (default for an invalid argument in this case)
                 PlayerDeadEventArgs eventArgs = new PlayerDeadEventArgs();
                 eventArgs.pointOfCollision = Vector3.zero;
                 OnPlayerDead.Invoke(this, eventArgs);
+
+                
             }
 
         }
+    }
+
+    private IEnumerator VibrateController(PlayerIndex playerIndex, float left, float right, WaitForSecondsRealtime duration)
+    {
+        Debug.Log($"Vibration coroutine started \"{left}, {right}, {duration}\"");
+        
+        GamePad.SetVibration(playerIndex, left, right);
+
+        yield return duration;
+        
+        // reset vibration back to off (normal)
+        GamePad.SetVibration(playerIndex, 0.0f, 0.0f);
+        Debug.Log($"Vibration coroutine finished \"{left}, {right}, {duration}\"");
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -159,7 +186,8 @@ public class PlayerMovementController : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             // Initiate game over sequence
-            
+            StartCoroutine(VibrateController(PlayerIndex.One, 1.0f, 1.0f, new WaitForSecondsRealtime(0.5f)));
+
             // 1) Know the point in space where collision took place
             ContactPoint contact = collision.contacts[0];
 
@@ -210,7 +238,6 @@ public class PlayerMovementController : MonoBehaviour
                 }
                 
                 rb.velocity += Vector3.forward * forwardForceMagnitude * controllerAccelerationStrength;
-                Debug.Log($"Controller Acceleration Strenght: {controllerAccelerationStrength}");
             }
         }
     }
