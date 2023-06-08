@@ -7,6 +7,10 @@ public class PlayerMovementController : MonoBehaviour
 {
 
     private Rigidbody rb = null;
+    private PlayerControls controllerControls = null;
+
+    // Acceleration strength from pressing Left Trigger on the controller
+    private float controllerAccelerationStrength = 0.0f;
 
     // this field is set only once, when the velocity of player becomes zero at the start of the scene
     bool hasStopped = false;
@@ -60,6 +64,16 @@ public class PlayerMovementController : MonoBehaviour
 
     public event EventHandler<PlayerDeadEventArgs> OnPlayerDead; // this event would be invoked when the player dies (goes below a certain speed)
 
+    private void Awake()
+    {
+        
+        controllerControls = new PlayerControls();
+        
+
+        controllerControls.Gameplay.Accelerate.performed += ctx => controllerAccelerationStrength = ctx.ReadValue<float>();
+        controllerControls.Gameplay.Accelerate.canceled += ctx => controllerAccelerationStrength = 0.0f;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +93,38 @@ public class PlayerMovementController : MonoBehaviour
     {
         CheckIfStopped();
         HandlePlayerMotion();
+        HandleAccelerationFromController();
+
+        float ltStrafeStrength = controllerControls.Gameplay.MoveLeft.ReadValue<float>();
+        float rtStrafeStrength = controllerControls.Gameplay.MoveRight.ReadValue<float>();
+        HandleControllerStrafeMotion(ltStrafeStrength, rtStrafeStrength);
+    }
+
+    private void HandleControllerStrafeMotion(float ltStrafeStrength, float rtStrafeStrength)
+    {
+        // dash left (negative X)
+        if (ltStrafeStrength > 0.0f)
+        {
+            rb.angularVelocity = Vector3.zero;
+            rb.velocity += Vector3.left * forwardForceMagnitude * ltStrafeStrength;
+        }
+
+        // dash right (positive X)
+        if (rtStrafeStrength > 0.0f)
+        {
+            rb.angularVelocity = Vector3.zero;
+            rb.velocity += Vector3.right * forwardForceMagnitude * rtStrafeStrength;
+        }
+    }
+
+    private void OnEnable()
+    {
+        controllerControls.Gameplay.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controllerControls.Gameplay.Disable();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -132,6 +178,41 @@ public class PlayerMovementController : MonoBehaviour
     public void SetCurrentPlane(GameObject plane)
     {
         this.plane = plane;
+    }
+
+    private void HandleAccelerationFromController()
+    {
+        if (!canBeginMotion && hasStopped)
+        {
+            // TODO: send a message to the UI manager to show 'START' text
+
+            // set 'canBeginMotion'
+            canBeginMotion = true;
+        }
+
+        if (canBeginMotion)
+        {
+            // if player speed is over the max limit, fix it to max limit
+
+            PreventSpeeding();
+
+            // move forward
+            if (rb.velocity.magnitude > 0.5f * maxSpeedLimit)
+            {
+                hasHitSpeedLimitOnce = true;
+                speedReducerCoroutine = StartCoroutine(SpeedReducerCoroutine());
+            }
+            else
+            {
+                if (hasHitSpeedLimitOnce)
+                {
+                    StopCoroutine(speedReducerCoroutine);
+                }
+                
+                rb.velocity += Vector3.forward * forwardForceMagnitude * controllerAccelerationStrength;
+                Debug.Log($"Controller Acceleration Strenght: {controllerAccelerationStrength}");
+            }
+        }
     }
 
     private void HandlePlayerMotion()
