@@ -222,7 +222,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             // if player speed is over the max limit, fix it to max limit
 
-            PreventSpeeding();
+            //PreventSpeeding();
 
             // move forward
             if (rb.velocity.magnitude > 0.5f * maxSpeedLimit)
@@ -256,7 +256,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             // if player speed is over the max limit, fix it to max limit
 
-            PreventSpeeding();
+            //PreventSpeeding();
 
             if (Input.GetKey(KeyCode.W))
             {
@@ -290,6 +290,11 @@ public class PlayerMovementController : MonoBehaviour
                 rb.velocity += Vector3.right * forwardForceMagnitude * dashSpeedMultiplier;
             }
         }
+    }
+
+    public PlayerControls GetPlayerControllerControls()
+    {
+        return controllerControls;
     }
 
     private void PreventSpeeding()

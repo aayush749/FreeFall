@@ -1938,6 +1938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7f70798ca132745bc65c942aeb7bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneOperator: {fileID: 1201805106}
   currentScoreTMP: {fileID: 755718759}
   oldHighScoreTMP: {fileID: 337912999}
   bamSprites:

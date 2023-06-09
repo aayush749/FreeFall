@@ -31,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Restart Game",
+                    "type": "Button",
+                    "id": "fed6d000-a4b9-4fd4-a577-d9767eba54a3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Quit Game",
+                    "type": "Button",
+                    "id": "5ae33b73-b11e-4d03-b289-954b1438b868",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -64,6 +82,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae70431e-5506-4763-9403-19f108f4a169",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Restart Game",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1299481a-49f9-4c37-8fd8-c4b8c22f9edf",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Quit Game",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

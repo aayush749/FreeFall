@@ -8,6 +8,11 @@ using UnityEngine.UIElements;
 
 public class ScoreUpdater : MonoBehaviour
 {
+    private PlayerControls controllerControls = null;
+
+    [SerializeField]
+    SceneOperator sceneOperator = null;
+
     TMP_Text scoreText, highScoreText;
 
     int initialScore = 0, score = 0;
@@ -28,6 +33,11 @@ public class ScoreUpdater : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // grab the reference to PlayerControls on our Cube player
+        controllerControls = GameObject.Find("Player")
+                                       .GetComponent<PlayerMovementController>()
+                                       .GetPlayerControllerControls();
+
         // initialize score
         initialScore = (int)Time.realtimeSinceStartup;
 
@@ -48,6 +58,24 @@ public class ScoreUpdater : MonoBehaviour
     void Update()
     {
         UpdateScores();
+
+        
+        if (controllerControls != null)
+        {
+            if (controllerControls.Gameplay.RestartGame.ReadValue<float>() == 1.0f)
+            {
+                sceneOperator.RestartGame();
+            }
+
+            if (controllerControls.Gameplay.QuitGame.ReadValue<float>() == 1.0f)
+            {
+                sceneOperator.QuitGame();
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Unable to get a reference to controllerControls");
+        }
     }
 
     private void UpdateScores()
