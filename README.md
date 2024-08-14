@@ -6,4 +6,4 @@
 
 ## <u>Gameplay Video</u>
 
-<img src = "./videos/vid-1.gif">
+<img src = "./res/videos/vid-1.gif">
